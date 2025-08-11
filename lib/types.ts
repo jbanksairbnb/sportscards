@@ -33,8 +33,8 @@ export const MLB_TEAMS = [
 ];
 
 export const STORAGE_KEYS = {
-  setsIndex: "card-sets-index",            // string[] of set names
-  setData: (setName: string) => `cards-${setName}`, // each set stored separately
+  setsIndex: "card-sets-index",
+  setData: (setName: string) => `cards-${setName}`,
 };
 
 export function uid() {

@@ -1,4 +1,4 @@
-import { CardRow, PSA_CONDITIONS, uid } from "./types";
+import { CardRow, PSA_CONDITIONS, uid } from "@/lib/types";
 
 function normalizeHeader(h: string) {
   return h.toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -43,7 +43,7 @@ export function rowsFromCSV(text: string): CardRow[] {
   }
 
   const rows: CardRow[] = [];
-  for (const r of body) {
+  for (const r of grid.slice(1)) {
     const map: Record<string,string> = {};
     headers.forEach((h, idx) => map[h] = r[idx] ?? "");
 
